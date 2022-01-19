@@ -1,0 +1,5 @@
+/bin
+/obj
+.exe
+KassemCarsDb.mdf
+KassemCarsDb_log.ldf

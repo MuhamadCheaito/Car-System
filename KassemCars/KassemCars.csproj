@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA4EE9A1-001F-4209-BE6D-8D699DF6FFA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KassemCars</RootNamespace>
+    <AssemblyName>KassemCars</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\KassemAutoApp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>10457199 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>95C45A76ABC33BDAF5B0C10179321B4C985F738C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KassemCars_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Office\root\Office16\ADDINS\PowerPivot Excel Add-in\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMsgBox.Designer.cs">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomQuestionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomQuestionBox.Designer.cs">
+      <DependentUpon>CustomQuestionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomSuccessBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomSuccessBox.Designer.cs">
+      <DependentUpon>CustomSuccessBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountMangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountMangement.Designer.cs">
+      <DependentUpon>frmAccountMangement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCustomer.Designer.cs">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSupplier.Designer.cs">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTransit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTransit.Designer.cs">
+      <DependentUpon>frmAddTransit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuyCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuyCar.Designer.cs">
+      <DependentUpon>frmBuyCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarCostsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarCostsData.Designer.cs">
+      <DependentUpon>frmCarCostsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarMaintenance.Designer.cs">
+      <DependentUpon>frmCarMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeSettings.Designer.cs">
+      <DependentUpon>frmChangeSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckAmountByMonths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckAmountByMonths.Designer.cs">
+      <DependentUpon>frmCheckAmountByMonths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckAmountsBySupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckAmountsBySupplier.Designer.cs">
+      <DependentUpon>frmCheckAmountsBySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmPassword.Designer.cs">
+      <DependentUpon>frmConfirmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSellCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSellCar.Designer.cs">
+      <DependentUpon>frmSellCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMMenu.Designer.cs">
+      <DependentUpon>frmSMMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransitShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransitShipment.Designer.cs">
+      <DependentUpon>frmTransitShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCar.Designer.cs">
+      <DependentUpon>frmUpdateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateDate.Designer.cs">
+      <DependentUpon>frmUpdateDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateExchangeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateExchangeRate.Designer.cs">
+      <DependentUpon>frmUpdateExchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatePaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatePaid.Designer.cs">
+      <DependentUpon>frmUpdatePaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateSupplier.Designer.cs">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateTransit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateTransit.Designer.cs">
+      <DependentUpon>frmUpdateTransit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewCars.Designer.cs">
+      <DependentUpon>frmViewCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedundantData.cs" />
+    <EmbeddedResource Include="CustomMsgBox.resx">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomQuestionBox.resx">
+      <DependentUpon>CustomQuestionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomSuccessBox.resx">
+      <DependentUpon>CustomSuccessBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountMangement.resx">
+      <DependentUpon>frmAccountMangement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSupplier.resx">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTransit.resx">
+      <DependentUpon>frmAddTransit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuyCar.resx">
+      <DependentUpon>frmBuyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarCostsData.resx">
+      <DependentUpon>frmCarCostsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarMaintenance.resx">
+      <DependentUpon>frmCarMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeSettings.resx">
+      <DependentUpon>frmChangeSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckAmountByMonths.resx">
+      <DependentUpon>frmCheckAmountByMonths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckAmountsBySupplier.resx">
+      <DependentUpon>frmCheckAmountsBySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmPassword.resx">
+      <DependentUpon>frmConfirmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSellCar.resx">
+      <DependentUpon>frmSellCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMMenu.resx">
+      <DependentUpon>frmSMMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransitShipment.resx">
+      <DependentUpon>frmTransitShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCar.resx">
+      <DependentUpon>frmUpdateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateDate.resx">
+      <DependentUpon>frmUpdateDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateExchangeRate.resx">
+      <DependentUpon>frmUpdateExchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatePaid.resx">
+      <DependentUpon>frmUpdatePaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateSupplier.resx">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateTransit.resx">
+      <DependentUpon>frmUpdateTransit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewCars.resx">
+      <DependentUpon>frmViewCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="KassemCars_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Icon-Grey-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-user-clip-art-user-5abf13db5624e4.1771742215224718993529.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="10457199 %281%29.ico" />
+    <Content Include="10457199.ico" />
+    <Content Include="21455254.ico" />
+    <None Include="Resources\495-4950485_confirm-new-password-comments-confirm-password-icon-png1.png" />
+    <None Include="Resources\495-4950485_confirm-new-password-comments-confirm-password-icon-png.png" />
+    <None Include="Resources\grass-check-mark-area-symbol-icon-design1.png" />
+    <None Include="Resources\grass-check-mark-area-symbol-icon-design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
